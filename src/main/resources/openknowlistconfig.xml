@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<listurlfeederinfo>
+		<ip>10.30.207.173</ip>
+		<port>8082</port>
+	</listurlfeederinfo>
+	<seeddbinfo>
+		<hostname>xkwebdbm02</hostname>
+		<dbname>LIST_SEED</dbname>
+	</seeddbinfo>
+	<listdbinfo>
+		<hostname>xkwebdbm02</hostname>
+		<dbname>UCC_KNOW_LIST</dbname>
+	</listdbinfo>
+	<crawlingskipfortemplateinfo>
+		<duplicatecount>10</duplicatecount>
+	</crawlingskipfortemplateinfo>
+	<timeout>
+		<maxcount>3</maxcount>
+	</timeout>
+</configuration>

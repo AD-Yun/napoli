@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters>
+	<filter name="kyobo" type="doc">
+		<classname>blog.Kyobo</classname>
+		<regexp><![CDATA[
+			(.*)<span class="post_category">(.*)</span>.*<div class="date">([0-9][0-9][0-9][0-9]-[0-9]+-[0-9]+) ([0-9]+:[0-9]+)</div>.*<!-- 본문 -->(.*)<!-- 본문 //-->.*<span class="item"><a href="javascript:displayReply\('[0-9]+'\)">댓글</a>\[<span class="number">([0-9]+)</span>\].*<a href="javascript:;" class="scrapClass">(스크랩</a>)\[<span class="number">([0-9]+)</span>\]
+		]]></regexp>
+		<fields>title,category,date,time,bodyhtml,replycount,scrapallow,scrapcount</fields>
+	</filter>
+		<filter name="kyobo" type="list">
+		<classname>blog.Kyobo</classname>
+		<regexp><![CDATA[
+			<div type="list" class="titleinfo">(.*)</a></h2>.*<span class="date">([^<]*)</span>(.*)
+		]]></regexp>
+		<fields>title, body</fields>
+	</filter>
+	<filter name="naver" type="doc">
+		<classname>blog.Naver</classname>
+		<regexp><![CDATA[
+			(.*)<span class="pcol1 itemSubjectBoldfont">(.*)</span>[^<]*(.*)<span class="cate pcol2">(.*)<p class="date fil5 pcol2 _postAddDate">([0-9][0-9][0-9][0-9]/[0-9]+/[0-9]+) ([0-9]+:[0-9]+)</p>[^<].*<div class="clear blank5"></div>[^<]*<p class="post_option">([^<]*<a href[^>]+>[^<]*<span class="[^\"]+">\(<em>[^<]*</em>\)</span></a>)?(.*)<input type=text class="tag_inp" title="태그를 입력해 주세요" value="" />.*
+		]]></regexp>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="naver" type="list">
+		<classname>blog.ListNaver</classname>
+	</filter>	
+	<filter name="daum_computer-end" type="doc">
+		<classname>know.DaumComputerEnd</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_poll" type="doc">
+		<classname>know.DaumPoll</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_report" type="doc">
+		<classname>know.DaumReport</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_open-know" type="doc">
+		<classname>know.DaumOpenKnow</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_ques" type="list">
+		<classname>know.DaumQuesList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_sindong" type="list">
+		<classname>know.DaumSindongList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_kdic" type="list">
+		<classname>know.DaumKdicList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_report_univ" type="list">
+		<classname>know.DaumReportList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_report_biz" type="list">
+		<classname>know.DaumReportList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_report_normal" type="list">
+		<classname>know.DaumReportList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="simfile" type="list">
+		<classname>know.SimfileList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="simfile_ques" type="list">
+		<classname>know.SimfileList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="simfile_unsolve" type="list">
+		<classname>know.SimfileList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>		
+	<filter name="jobkorea_newqna_ques" type="list">
+		<classname>know.JobKoreaQNAList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="daum_poll" type="list">
+		<classname>know.DaumPollList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>			
+	<filter name="daum" type="list">
+		<classname>know.DaumList</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>		
+	<filter name="daum_live" type="doc">
+		<classname>know.DaumLive</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="simfile_computer-end" type="doc">
+		<classname>know.SimfileComputerEnd</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>
+	<filter name="jobkorea_computer-end" type="doc">
+		<classname>know.JobKoreaComputerEnd</classname>
+		<prefix><![CDATA[<head>]]></prefix>
+		<suffix>><![CDATA[<div class="content3">]]></suffix>
+		<fields>metasearch,title,searchallow,category,date,time,-,bodyhtml</fields>
+	</filter>	
+</filters>

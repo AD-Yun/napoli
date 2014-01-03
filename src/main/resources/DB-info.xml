@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Mysql_DB_Info>
+
+<configuration>
+	<xkwebdbm02>
+		<ip>10.30.205.59</ip>
+		<port>3306</port>
+		<userid>bumblekee_worker</userid>
+		<password>sweep_worker@!</password>
+	</xkwebdbm02>
+	<wdocfilter011>
+		<ip>10.171.0.81</ip>
+		<port>22</port>
+		<userid>search</userid>
+		<password>searchsearch</password>
+	</wdocfilter011>
+</configuration>

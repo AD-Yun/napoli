@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<hosts>
+		<name>naver,daum,tistory,cyworld,etc</name>
+		<hostpermax>10</hostpermax>
+		<hostmaxrun>50</hostmaxrun>
+	</hosts>
+	
+</configuration>

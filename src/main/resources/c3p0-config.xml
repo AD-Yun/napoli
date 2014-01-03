@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE c3p0-config>
+
+<c3p0-config>
+	<default-config>
+		<property name="acquireIncrement">1</property>
+		<property name="checkoutTimeout">30000</property> 
+		<property name="idleConnectionTestPeriod">10</property> 
+		<property name="initialPoolSize">3</property> 
+		<property name="maxIdleTime">10</property> 
+		<property name="maxPoolSize">200</property> 
+		<property name="minPoolSize">3</property> 
+		<property name="maxStatements">2000</property>
+		<property name="testConnectionOnCheckout">false</property>  
+		<property name="testConnectionOnCheckin">true</property>
+		<property name="preferredTestQuery">select 1</property>
+		<property name="numHelperThreads">3</property>
+	</default-config> 
+</c3p0-config> 

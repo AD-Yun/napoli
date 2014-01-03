@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SqlMapper">
+        <select id="selectQuery" resultType="java.util.HashMap">
+            select url from RecvSite where Status = '1'
+        </select>
+        
+        <update id="updateQuery" parameterType="java.util.HashMap">
+        	update RecvSite set Status = '2' where url = '${url}'
+        </update>
+
+<!--
+        <insert id="insertQuery" parameterType="com.mybatis.app.User">
+                insert into Person_MyBatis (id, name) values (#{id}, #{name})
+        </insert>       
+        
+        <delete id="deleteQuery" parameterType="string">
+                delete from Person_MyBatis where id = #{id}
+        </delete>
+
+        <update id="updateQuery" parameterType="com.mybatis.app.User">
+                UPDATE Person_MyBatis 
+                SET 
+                        name = '${name}'
+                WHERE
+                        id = ${id}
+        </update>
+-->
+
+</mapper>

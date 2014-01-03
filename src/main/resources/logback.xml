@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<appender name="FILE-LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/venice.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/%d{yyyyMMdd}.venice.%i.log.zip</fileNamePattern>
+			<maxHistory>60</maxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>5MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] %-5level %logger{30} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level [%logger{30}] - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- logger 등록--><!--  등록하지 않으면 root 의 설정을 따름
+	<logger name="search.crawl.napoli.MainThread" level="info" additivity="false">
+		<appender-ref ref="FILE-LOG" />
+	</logger>
+	<logger name="search.crawl.napoli.util.Grabber" level="debug" additivity="false">
+		<appender-ref ref="FILE-LOG" />
+	</logger>
+ -->
+
+	<root level="info"><!-- <root level="OFF"> -->
+		<appender-ref ref="FILE-LOG"/>
+	</root>
+</configuration>
+

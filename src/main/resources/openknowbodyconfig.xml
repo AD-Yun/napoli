@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<urlfeederinfo>
+		<ip>10.30.207.173</ip>
+		<port>8081</port>
+	</urlfeederinfo>
+	<docidserverinfo>
+		<ip>10.30.207.173</ip>
+		<port>8088</port>
+	</docidserverinfo>
+	<listRecdbinfo>
+		<hostname>xkwebdbm02</hostname>
+		<dbname>UCC_KNOW_LIST</dbname>
+	</listRecdbinfo>
+	<listArcdbinfo>
+		<hostname>xkwebdbm02</hostname>
+		<dbname>KNOW_URL_ARCHIVE</dbname>
+	</listArcdbinfo>
+	<bodydbinfo>
+		<hostname>xkwebdbm02</hostname>
+		<dbname>UCC_KNOW_DOC</dbname>
+	</bodydbinfo>
+	<crawlingskipfortemplateinfo>
+		<duplicatecount>10</duplicatecount>
+	</crawlingskipfortemplateinfo>
+	<timeout>
+		<maxcount>3</maxcount>
+	</timeout>
+	<cookeddeamoninfo>
+		<ip>10.30.207.172</ip>
+		<port>5400</port>
+	</cookeddeamoninfo>
+	<htmlbdbinfo>
+		<daemonname>OKDSSD</daemonname>
+		<ip>10.171.190.196</ip>
+		<port>5200</port>
+		<hashingNum>11</hashingNum>
+	</htmlbdbinfo>
+	<thumbbdbinfo>
+		<daemonname>OKISSD</daemonname>
+		<ip>10.171.190.196</ip>
+		<port>5100</port>
+		<hashingNum>8</hashingNum>
+	</thumbbdbinfo>
+</configuration>

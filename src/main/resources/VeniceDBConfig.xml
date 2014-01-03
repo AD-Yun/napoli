@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<service>
+		<key>egloos</key>		
+		<ip>10.172.130.205</ip>
+		<user>dev</user>
+		<password>dev</password>
+		<db>ES</db>
+		<table>egloos</table>
+		<mode>1</mode>
+	</service>
+	<service>
+		<key>naver</key>		
+		<ip>10.172.130.205</ip>
+		<user>dev</user>
+		<password>dev</password>
+		<db>NV</db>
+		<table>naver</table>
+		<mode>1</mode>
+	</service>	
+</configuration>
