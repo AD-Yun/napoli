@@ -13,7 +13,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.nate.search.milano.common.MilanoEnums;
+import search.crawl.milano.common.MilanoEnums;
 
 import search.crawl.milano.db.MysqlHandler;
 import search.crawl.milano.db.MysqlPool;

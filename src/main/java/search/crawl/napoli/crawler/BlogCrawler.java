@@ -9,7 +9,6 @@ import search.crawl.napoli.common.BodyCrawlDataInfo;
 import search.crawl.napoli.common.HtmlInfo;
 import search.crawl.napoli.common.OpenKnowBodyConfig;
 import search.crawl.napoli.common.OpenKnowListConfig;
-import search.crawl.napoli.db.VeniceCollectionData;
 import search.crawl.napoli.filter.Filter;
 import search.crawl.napoli.filter.FilterUtil;
 import search.crawl.napoli.filter.FilteredData;
@@ -35,13 +34,13 @@ public class BlogCrawler extends BodyCrawler {
 		return true;
 	}
 	
-	private void setFieldData(VeniceCollectionData cd, URL url) throws Exception {
+	/*private void setFieldData(VeniceCollectionData cd, URL url) throws Exception {
 		//result.toString()
 		cd.setValue("HOST", url.getHost());
 		cd.setValue("Path", url.getPath());
 		cd.setValue("Signature", Commons.getMD5Hash(cd.getValue("Title")));
 		cd.setValue("CookedTitle", ATPCommons.getCookedText(OpenKnowBodyConfig.getInstance().getCookDeamonIP(), OpenKnowBodyConfig.getInstance().getCookDeamonPort(), cd.getValue("Title")));
-	}
+	}*/
 	
 	public void work()  {
 //		if(!getCrawlDataFromUrlFeeder()) {

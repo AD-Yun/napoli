@@ -9,7 +9,6 @@ import java.util.Map;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import search.crawl.napoli.db.CollectionData;
 import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.ArticleExtractor;
 
@@ -63,21 +62,4 @@ public class CommonFilter extends DocFilter {
 			Map<String, String> regexpResult) {
 		return regexpResult;
 	}
-	
-	// 임시. test 용.
-	public FilteredData setDataObject(Map<String, String> regexpResult, CollectionData tmp)  {
-		//validExtractFields 와 map 결과가 일치하는 것이 있다면 그대로 setting.
-		Map<String, String> filteredResult = new HashMap<String, String>();
-		for(String field : this.validExtractFields) {
-			if(regexpResult.containsKey(field.toLowerCase())) {
-				filteredResult.put(field, regexpResult.get(field.toLowerCase()));
-			}
-		}
-		//validExtractFields 들에 대한 처리.
-		
-		//filtering 결과 이외의 데이터는 filter 이후 setting.
-		FilteredData fd = new FilteredData("doc", Integer.parseInt(regexpResult.get("filterstate")), filteredResult);
-		return fd;
-	}
-	
 }

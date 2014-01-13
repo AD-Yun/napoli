@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 import search.crawl.napoli.common.VeniceException;
-import search.crawl.napoli.db.CollectionData;
 import search.crawl.napoli.filter.FilterElement;
 import search.crawl.napoli.filter.FilteredData;
 import search.crawl.napoli.filter.ListFilter;
@@ -55,24 +54,6 @@ public class BlogListFilter extends ListFilter {
 	 * 혹, 하위 클래스에서 해야한다면 overriding 하도록 하자.
 	 * @see search.crawl.napoli.filter.Filter#setDataObject()
 	 */
-	public FilteredData setDataObject(List<Map<String, String>> regexpResult, CollectionData tmp) {
-		List<Map<String, String>> lstCollectionData = new ArrayList();
-		
-		//db field 와 map 결과가 일치하는 것이 있다면 그대로 setting.
-		for(Map<String, String> map : regexpResult) { 
-			Map<String, String> resultMap = new HashMap<String, String>();
-			for(String field : this.validExtractFields) { 
-				if(map.containsKey(field.toLowerCase())) {
-					resultMap.put(field, map.get(field.toLowerCase()));
-				}
-			}
-			lstCollectionData.add(resultMap);
-		}
-		//filtering 결과 이외의 데이터는 filter 이후 setting.
-		FilteredData fd = new FilteredData("list", 1, lstCollectionData);
-		
-		return fd;
-	}
 	@Override
 	public String getBodyTemplateName(String url) throws VeniceException {
 		// TODO Auto-generated method stub
