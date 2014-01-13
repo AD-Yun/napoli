@@ -60,7 +60,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<version>1.5.0</version>
 		</dependency>
 		<dependency>
-			<groupId>search.crawl.napoli.jsoup</groupId>
+			<groupId>com.nate.search.venice.jsoup</groupId>
 			<artifactId>venice_jsoup</artifactId>
 			<version>0.1</version>
 			<scope>system</scope>
@@ -103,7 +103,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>venice</finalName>
+		<finalName>napoli</finalName>
 		<plugins>
 				<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
